@@ -1,0 +1,47 @@
+.content {
+  position: relative;
+  height: 200%;
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
+}
+@media (max-width: 740px) {
+  header {
+    text-align: left;
+  }
+  #navigation ul li {
+    font-size: 23px;
+  }
+}
+
+.sidenav {
+  display:contents;
+  width: 300px;
+  position:relative;
+  float:left;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #0a0a23;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #5294E2;
+}
+
+.main {
+  margin-left: 0px; /* Displays under menu, no more margin needed */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

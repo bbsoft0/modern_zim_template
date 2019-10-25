@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>[% title %]</title>
+    <meta name="generator" content="Zim [% generator.name %], based on the modern template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <!-- Desktop / mobile stylesheet selection 	-->
+
+	<link rel="stylesheet" media="screen and (min-width: 741px)" href="[% resource('css/style.css') %]">  
+	<link rel="stylesheet" media="screen and (max-width: 740px)" href="[% resource('css/style_amp.css') %]">  
+  
+</head>
+
+<body>
+  <div class="page">
+
+    <div id="navigation" class="sidenav">
+      [% index() %]
+    </div>
+
+    <main class="content">
+      <div class="content_inner main">
+          <header>
+          </header>
+
+            <!--[% FOR page IN pages %]-->
+            <div class="page-title">
+              <h1><i class="icon icon-bookmarkalt"></i> [% page.title %] <a name='[% anchor(page) %]'></a></h1>
+            </div>
+            <!--[% END %]-->
+            <div class="page-body">
+              [% page.body %]
+            </div>
+
+          <footer>
+              <a href="#" class="scrollToTop" title="Back to top"><i class="icon icon-uploadalt"></i></a>
+            <!--[% FOR link IN page.backlinks %]-->
+              [% IF loop.first %]
+              <b>Backlinks:</b>
+              [% END %]
+              <a class="page" href='[% uri(link) %]'>[% link.name %]</a>
+              [% IF loop.last %]<br /><br />[% END %]
+            <!--[% END %]-->
+          </footer>
+      </div>
+    </main>
+  </div>
+
+
+</body>
+</html>
